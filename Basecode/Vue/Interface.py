@@ -17,8 +17,8 @@ class Drawer:
         self.decalageSol = 0
 
     def extract(self):
-        self.sheet = pygame.image.load("../Ressources/sprites.png").convert()
-        with open('../Ressources/descripteur.json') as f: descripteur = json.load(f)
+        self.sheet = pygame.image.load("Ressources/sprites.png").convert()
+        with open('Ressources/descripteur.json') as f: descripteur = json.load(f)
         for objet in descripteur['objets']:
             for coord in objet['coords']:
                 rect = pygame.Rect(int(coord['x']), int(coord['y']), int(coord['w']), int(coord['h']))
